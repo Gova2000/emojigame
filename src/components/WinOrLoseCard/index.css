@@ -1,0 +1,66 @@
+/* Write your code here. */
+.win {
+  background-color: #ffffff33;
+  background-size: cover;
+  width: 800px;
+  height: 500px;
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  align-items: center;
+  flex-direction: row;
+}
+.but {
+  background-color: #ffce27;
+  border: none;
+  border-radius: 10px;
+  height: 30px;
+  padding: 10px;
+  text-align: center;
+  color: #3d3d3d;
+  font-size: smaller;
+  font-weight: bold;
+}
+.gg {
+  height: 450px;
+  margin: 30px;
+}
+.h {
+  font-size: 62px;
+  color: #ffffff;
+}
+.winlos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.h1 {
+  font-size: x-large;
+  font-weight: bold;
+  color: #ffffff;
+}
+.p {
+  color: #6a59ff;
+  font-size: x-large;
+  font-weight: bold;
+}
+@media (max-width: 576px) {
+  .gg {
+    order: 0;
+    height: 200px;
+  }
+  .winlos {
+    order: 1;
+  }
+  .h1 {
+    font-size: medium;
+  }
+  .h {
+    font-size: xx-large;
+  }
+  .win {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,28 @@
+/* Write your code here. */
+.card {
+  background-color: #ffffff33;
+  height: 150px;
+  width: 150px;
+  margin: 8px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+li {
+  list-style: none;
+}
+
+@media (max-width: 576px) {
+  .iimg {
+    height: 50px;
+    width: 50px;
+  }
+  .card {
+    height: 70px;
+    width: 70px;
+  }
+}

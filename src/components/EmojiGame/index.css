@@ -1,0 +1,20 @@
+/* Write your code here. */
+.main {
+  background-image: linear-gradient(to bottom, #9796f0, #ffffff33);
+  background-size: cover;
+  height: 100vh;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ul {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 800px;
+}
