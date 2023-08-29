@@ -22,7 +22,7 @@ const Winlose = props => {
   return (
     <div className="win">
       <div className="winlos">
-        <p className="h">{text}</p>
+        <h1 className="h">{text}</h1>
         <p className="h1">{sc}</p>
         <p className="p">{det}/12</p>
         <button type="button" className="but" onClick={back}>
