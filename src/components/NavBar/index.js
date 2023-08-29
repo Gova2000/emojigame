@@ -4,7 +4,7 @@ import './index.css'
 const Navbar = props => {
   const {tscore, score, t} = props
 
-  const dis = t ? 'car d-block' : 'car d-none'
+  
 
   return (
     <div className=" ro">
@@ -17,10 +17,10 @@ const Navbar = props => {
         <h1>Emoji Game</h1>
       </div>
 
-      <div className={dis}>
+  {t?<div className='car'>
         <p>Score: {score}</p>
         <p>Top Score: {tscore}</p>
-      </div>
+      </div>:''}
     </div>
   )
 }
