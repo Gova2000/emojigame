@@ -50,8 +50,8 @@ class EmojiGame extends Component {
 
     this.setState(prev => ({tog: !prev.tog}))
 
-    if (list.length > topcount) {
-      this.setState({topcount: list.length})
+    if (count > topcount) {
+      this.setState({topcount: count})
     }
 
     this.setState({count: 0})
