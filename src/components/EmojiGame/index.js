@@ -31,17 +31,17 @@ class EmojiGame extends Component {
 
     const check = list.includes(id)
 
-    if (check || count === 12) {
+    if (check) {
       this.setState(prev => ({tog: !prev.tog}))
     } else {
-      this.setState({count: count + 1})
+      this.setState(prev => ({count: prev.count + 1}))
 
-      const filt = emojisList.filter(each => each.id === id)
+      if (emojisList - 1 === list.length) {
+        this.endgame(emojisList.length)
+      }
       this.setState(prev => ({
         list: [...prev.list, id],
       }))
-
-      console.log(check)
     }
   }
 
@@ -49,7 +49,6 @@ class EmojiGame extends Component {
     const {count, topcount, list} = this.state
 
     this.setState(prev => ({tog: !prev.tog}))
-
     if (count > topcount) {
       this.setState({topcount: count})
     }
@@ -67,9 +66,6 @@ class EmojiGame extends Component {
     const {list, tog, topcount, count} = this.state
 
     const emoji = this.shuffle()
-
-    console.log(emoji)
-    console.log(list)
 
     return (
       <div className="main">
