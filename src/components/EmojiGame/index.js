@@ -24,6 +24,16 @@ import Winlose from '../WinOrLoseCard'
 class EmojiGame extends Component {
   state = {list: [], tog: true, topcount: 0, count: 0}
 
+  endgame = () => {
+    const {count, topcount, list} = this.state
+
+    this.setState(prev => ({tog: !prev.tog}))
+
+    if (list.length > topcount) {
+      this.setState({topcount: list.length})
+    }
+  }
+
   Delete = id => {
     const {list, tog, topcount, count} = this.state
 
@@ -36,7 +46,7 @@ class EmojiGame extends Component {
     } else {
       this.setState(prev => ({count: prev.count + 1}))
 
-      if (emojisList - 1 === list.length) {
+      if (emojisList.length - 1 === list.length) {
         this.endgame(emojisList.length)
       }
       this.setState(prev => ({
@@ -49,8 +59,8 @@ class EmojiGame extends Component {
     const {count, topcount, list} = this.state
 
     this.setState(prev => ({tog: !prev.tog}))
-    if (count > topcount) {
-      this.setState({topcount: count})
+    if (list.length > topcount) {
+      this.setState({topcount: list.length})
     }
 
     this.setState({count: 0})
@@ -63,6 +73,8 @@ class EmojiGame extends Component {
   }
 
   render() {
+    const {emojisList} = this.props
+
     const {list, tog, topcount, count} = this.state
 
     const emoji = this.shuffle()
